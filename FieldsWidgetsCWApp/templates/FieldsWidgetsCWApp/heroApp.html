@@ -1,0 +1,18 @@
+{% extends "FieldsWidgetsCWApp/index.html" %}
+
+{% block header %}
+Welcome Applicant
+{% endblock %}
+
+{% block content %}
+<form method="post">
+{% csrf_token %}
+{{ heroform.as_p }}
+<button>Submit</button>
+</form>
+<p><a href="{% url 'index' %}">Go Back</a></p>
+{% endblock %}
+
+{% block footer %}
+Hero City 2019
+{% endblock %}
